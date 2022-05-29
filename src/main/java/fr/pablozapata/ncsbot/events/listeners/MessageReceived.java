@@ -15,6 +15,7 @@ public class MessageReceived {
         final var member = event.getMember();
         final var guild = event.getGuild();
         boolean is_using_blacklisted_term = false;
+        
         if (!(channelType.isMessage() && channelType.isGuild())) {
             return;
         }
@@ -24,7 +25,6 @@ public class MessageReceived {
         }
       // Loop to check Blacklisted terms
         for (String i : Constant.Blacklisted_terms) {
-            System.out.println(i);
             if (message.getContentRaw().contains(i)) {
                 message.delete().submit();
                 channel.sendMessage(
