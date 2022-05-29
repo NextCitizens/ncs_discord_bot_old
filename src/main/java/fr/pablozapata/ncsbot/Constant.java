@@ -6,4 +6,5 @@ public class Constant {
     public static final class Channels {
         public static final Long FLUX_CHANNEL_ID = 980525401644367903L;
     }
+    public static final String[] Blacklisted_terms = { "fuck", "bitch" };
 }
